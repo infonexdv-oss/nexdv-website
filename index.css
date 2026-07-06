@@ -732,3 +732,21 @@ body.no-scroll, html.no-scroll {
 
 
 
+
+.btn-fb {
+    background: linear-gradient(90deg, #1877F2, #0d47a1, #1877F2);
+    background-size: 200% auto;
+    transition: all 0.4s ease !important;
+    border: none !important;
+}
+.btn-fb:hover {
+    background-position: right center;
+    box-shadow: 0 12px 30px rgba(24, 119, 242, 0.6) !important;
+    transform: translateY(-2px) !important;
+}
+.btn-fb svg {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.btn-fb:hover svg {
+    transform: rotate(-15deg) scale(1.2);
+}
