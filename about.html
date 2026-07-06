@@ -6,13 +6,68 @@
     <title>About NexDV | Elite Software Solutions</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .value-card {
+            background: rgba(20, 20, 25, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            text-align: center;
+        }
+        .value-card:hover {
+            transform: translateY(-10px);
+            background: rgba(30, 30, 40, 0.6);
+            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .value-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .founder-card { flex-direction: column; text-align: center; }
+            .founder-info { text-align: center !important; }
+            .founder-actions { justify-content: center; }
+            .values-grid { grid-template-columns: 1fr !important; }
+        }
+    </style>
+    <style>
+        @keyframes gradientSpin {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-border {
+            position: relative;
+            display: inline-block;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(45deg, #1877F2, #10b981, #8b5cf6, #1877F2);
+            background-size: 300% 300%;
+            animation: gradientSpin 4s ease infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .animated-border img {
+            display: block;
+            border-radius: 50%;
+            border: 4px solid var(--bg-deep); /* Inner border */
+        }
+    </style>
 </head>
 <body>
 
     <nav id="navbar">
         <a href="index.html" class="logo-group">
             <img src="https://i.ibb.co/qLVD2YWg/d7bf73944e81.png" alt="NexDV Logo">
-            
         </a>
         
         <button class="menu-toggle" id="menu-toggle">
@@ -29,46 +84,171 @@
         <a href="https://wa.me/94787354843" target="_blank" class="nav-btn">Contact Us</a>
     </nav>
 
-    <header class="hero" style="min-height: 60vh; padding-top: 150px; padding-bottom: 20px;">
-        <div class="badge reveal">Who We Are</div>
-        <h1 class="reveal">Building the Future of <br> <span class="text-gradient-primary">Digital Infrastructure</span></h1>
-        <p class="reveal">We specialize in crafting elite software solutions for modern enterprises.</p>
+    <!-- Hero Section -->
+    <header class="hero" style="min-height: 50vh; padding-top: 150px; padding-bottom: 20px;">
+        <div class="badge reveal">Our Story</div>
+        <h1 class="reveal">Engineering the <span class="text-gradient-primary">Digital Future</span></h1>
+        <p class="reveal" style="max-width: 700px; margin: 0 auto;">We are NexDV. A team of elite developers pushing the boundaries of software architecture to deliver unparalleled digital experiences.</p>
     </header>
 
-    <section>
+    <!-- Founder Section -->
+    <section id="leadership" style="padding-top: 20px; padding-bottom: 60px;">
         <div class="container">
-            <div class="grid-2">
-                <div class="glass-card reveal-left" style="background: rgba(59, 130, 246, 0.05);">
-                    <div class="icon-wrap" style="background: rgba(59, 130, 246, 0.1);"><i data-lucide="target"></i></div>
-                    <h3>Our Mission</h3>
-                    <p>At NexDV, we believe in pushing the boundaries of what's possible in software architecture. Our mission is to provide businesses with the most robust, visually stunning, and highly optimized digital tools available on the market, bridging the gap between raw backend power and elegant frontend design.</p>
+            <div class="glass-card reveal founder-card" style="display: flex; align-items: center; gap: 50px; padding: 50px; background: rgba(20, 20, 25, 0.4); border: 1px solid rgba(255,255,255,0.05);">
+                
+                <div class="founder-image-wrapper" style="flex-shrink: 0; position: relative; margin: 0 auto;">
+                    <div style="position: absolute; inset: -15px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 50%; filter: blur(25px); opacity: 0.4; z-index: 1;"></div>
+                    <div class="animated-border"><img src="assets/My img.jpg" alt="Asanka Chandima" style="width: 210px; height: 210px; object-fit: cover; position: relative; z-index: 2;"></div>
                 </div>
                 
-                <div class="glass-card reveal-right" style="display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 60px 40px;">
-                    <div class="icon-wrap" style="margin: 0 auto 20px; background: rgba(16, 185, 129, 0.1); color: var(--accent); border-color: rgba(16, 185, 129, 0.2);"><i data-lucide="message-circle"></i></div>
-                    <h3>Get in Touch</h3>
-                    <p style="margin-bottom: 30px;">Have a custom requirement or need support for our existing products? We're available 24/7 via WhatsApp.</p>
-                    <a href="https://wa.me/94787354843" target="_blank" class="btn-primary" style="margin: 0 auto;">
-                        <i data-lucide="smartphone"></i> Chat on WhatsApp
-                    </a>
+                <div class="founder-info" style="flex: 1; max-width: 700px; text-align: left;">
+                    <div class="badge" style="margin-bottom: 15px; display: inline-block;">Co-Founder & Lead Engineer</div>
+                    <h3 style="font-size: 2.4rem; margin-bottom: 15px; color: #fff;">Asanka Chandima</h3>
+                    <p style="color: var(--text-dim); margin-bottom: 30px; font-size: 1.05rem; line-height: 1.7;">
+                        The driving architectural visionary behind the NexDV ecosystem. With a profound passion for complex problem-solving and modern software design, Asanka leads our engineering efforts to build high-performance, robust, and infinitely scalable digital infrastructure that powers the modern enterprise.
+                    </p>
+                    
+                    <div class="founder-actions" style="display: flex; flex-wrap: wrap; gap: 15px;">
+                        <a href="https://www.facebook.com/asanka.chandima.39" target="_blank" class="btn-outline" style="padding: 12px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px; border-color: rgba(255,255,255,0.2);">
+                            <!-- Facebook Official Blue SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            Connect on Facebook
+                        </a>
+                        <a href="https://wa.me/94787354843" target="_blank" class="btn-outline" style="padding: 12px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px; border-color: rgba(255,255,255,0.2);">
+                            <!-- WhatsApp Official Green SVG -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                            WhatsApp
+                        </a>
+                        <a href="mailto:asankachandima055@gmail.com" class="btn-primary" style="padding: 12px 25px; border-radius: 30px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="mail" style="width: 18px;"></i> Email Support
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Details Section -->
+    <section style="padding: 60px 0; background: rgba(0,0,0,0.2);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 60px;" class="reveal">
+                <h2 style="font-size: 2.5rem; margin-bottom: 15px;">The NexDV <span class="text-gradient-primary">Philosophy</span></h2>
+                <p style="color: var(--text-dim); max-width: 600px; margin: 0 auto;">We don't just write code. We architect solutions. Discover what drives our engineering excellence.</p>
+            </div>
+            
+            <div class="values-grid reveal" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+                <!-- Value 1 -->
+                <div class="value-card">
+                    <div class="value-icon"><i data-lucide="cpu" style="width: 30px; height: 30px;"></i></div>
+                    <h3 style="margin-bottom: 15px;">Elite Performance</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; line-height: 1.6;">Our software is designed for maximum efficiency. Whether it's our PC bundles or mobile utilities, we prioritize raw execution speed and minimal resource consumption.</p>
+                </div>
+                <!-- Value 2 -->
+                <div class="value-card">
+                    <div class="value-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--accent);"><i data-lucide="shield-check" style="width: 30px; height: 30px;"></i></div>
+                    <h3 style="margin-bottom: 15px;">Bulletproof Security</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; line-height: 1.6;">Security isn't an afterthought; it's the foundation. We implement enterprise-grade encryption and rigorous testing to ensure your data remains completely isolated and safe.</p>
+                </div>
+                <!-- Value 3 -->
+                <div class="value-card">
+                    <div class="value-icon" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6;"><i data-lucide="sparkles" style="width: 30px; height: 30px;"></i></div>
+                    <h3 style="margin-bottom: 15px;">Modern Aesthetics</h3>
+                    <p style="color: var(--text-dim); font-size: 0.95rem; line-height: 1.6;">Powerful software shouldn't be complicated to use. We combine deep backend logic with stunning, glassmorphic frontend UI to create an unforgettable user experience.</p>
                 </div>
             </div>
         </div>
     </section>
 
-            <footer style="border-top: 1px solid var(--border); background: var(--bg-deep);">
-        <div class="container footer-grid reveal" style="padding-top: 40px; padding-bottom: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
+    <!-- Mission & Approach Section -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: 60px;">
+                <div class="reveal-left">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Transforming Ideas into <br><span class="text-gradient-primary">Digital Reality</span></h2>
+                    <p style="color: var(--text-dim); margin-bottom: 20px; line-height: 1.7;">At NexDV, our journey began with a simple vision: to bridge the gap between heavy, enterprise-grade capabilities and consumer-friendly design. Over the years, we have built a powerful ecosystem of PC and Android applications.</p>
+                    <p style="color: var(--text-dim); margin-bottom: 30px; line-height: 1.7;">From our flagship Rupix PRO suite to our everyday utilities like Riya Mithuru and HelpMate, every line of code we write is optimized to empower our users, streamline workflows, and redefine what modern software can achieve.</p>
+                    
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li style="display: flex; align-items: center; gap: 10px; color: #fff;">
+                            <i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> 100% Native Code Optimization
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; color: #fff;">
+                            <i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> Seamless Cross-Platform Ecosystem
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px; color: #fff;">
+                            <i data-lucide="check-circle" style="color: var(--primary); width: 20px;"></i> 24/7 Dedicated Developer Support
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card reveal-right" style="padding: 40px; border-radius: 20px; position: relative; overflow: hidden;">
+                    <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: var(--primary); filter: blur(80px); opacity: 0.3;"></div>
+                    <div style="position: absolute; bottom: -50px; left: -50px; width: 150px; height: 150px; background: var(--accent); filter: blur(80px); opacity: 0.3;"></div>
+                    
+                    <h3 style="margin-bottom: 20px; text-align: center;">Our Global Footprint</h3>
+                    <div style="display: flex; justify-content: center; margin-bottom: 30px;">
+                        <i data-lucide="globe" style="width: 80px; height: 80px; color: rgba(255,255,255,0.8);"></i>
+                    </div>
+                    <p style="text-align: center; color: var(--text-dim); margin-bottom: 20px;">Our software is trusted by professionals globally, providing the infrastructure needed for next-generation task management and digital creation.</p>
+                    <div style="display: flex; justify-content: center; gap: 30px;">
+                        <div style="text-align: center;">
+                            <h4 style="font-size: 2rem; color: var(--primary);">6+</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-dim);">Products</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <h4 style="font-size: 2rem; color: var(--accent);">24/7</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-dim);">Support</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <h4 style="font-size: 2rem; color: #fff;">100%</h4>
+                            <span style="font-size: 0.85rem; color: var(--text-dim);">Commitment</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Community CTA Banner -->
+    <section class="reveal" style="padding: 40px 0 30px 0; background: linear-gradient(90deg, rgba(59, 130, 246, 0.05), rgba(139, 92, 246, 0.05)); border-top: 1px solid rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.02);">
+        <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 30px;">
+            <div style="flex: 1; min-width: 300px;">
+                <div class="badge" style="margin-bottom: 15px; background: rgba(24, 119, 242, 0.1); color: #1877F2; border-color: rgba(24, 119, 242, 0.2);">Official Community</div>
+                <h3 style="font-size: 2rem; margin-bottom: 10px; color: #fff;">
+                    Stay Updated with <span class="text-gradient-primary">NexDV</span>
+                </h3>
+                <p style="color: var(--text-dim); font-size: 1.05rem; max-width: 600px; line-height: 1.6;">Want to see the latest updates, upcoming software releases, and news from our development team? Follow our official Facebook page!</p>
+            </div>
+            <a href="https://www.facebook.com/nexdv" target="_blank" class="btn-primary" style="padding: 16px 35px; border-radius: 30px; display: flex; align-items: center; gap: 12px; font-weight: 600; box-shadow: 0 10px 25px rgba(24, 119, 242, 0.3); background: #1877F2; border: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Join Official Facebook
+            </a>
+        </div>
+    </section>
+
+    <footer style="border-top: 1px solid var(--border); background: var(--bg-deep);">
+        <div class="container footer-grid reveal" style="padding-top: 20px; padding-bottom: 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
             <div class="footer-col" style="grid-column: span 2;">
                 <div class="logo-group" style="margin-bottom: 10px;">
-                    <img src="https://i.ibb.co/qLVD2YWg/d7bf73944e81.png" alt="NexDV Logo" style="height: 28px;">
+                    <img src="https://i.ibb.co/qLVD2YWg/d7bf73944e81.png" alt="NexDV Logo" style="height: 45px; filter: grayscale(100%) brightness(3); opacity: 0.7; margin-left: -5px;">
                     <span class="logo-text-main" style="font-size: 1.1rem; margin-left: 10px;">NexDv</span>
                 </div>
                 <p class="footer-desc" style="max-width: 300px; font-size: 0.85rem; margin-bottom: 15px; color: var(--text-dim);">Engineering the next generation of enterprise software and elite mobile utilities for the modern digital landscape.</p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="#" style="color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'"><i data-lucide="facebook" style="width: 16px;"></i></a>
-                    <a href="#" style="color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'"><i data-lucide="twitter" style="width: 16px;"></i></a>
-                    <a href="#" style="color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'"><i data-lucide="linkedin" style="width: 16px;"></i></a>
-                    <a href="#" style="color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'"><i data-lucide="github" style="width: 16px;"></i></a>
+                <div style="display: flex; gap: 15px; margin-top: 15px; align-items: center;">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/nexdv" target="_blank" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/94787354843" target="_blank" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="WhatsApp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:asankachandima055@gmail.com" target="_blank" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-col">
@@ -87,15 +267,15 @@
                 <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
                     <li><a href="about.html" style="text-decoration: none; color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">About Us</a></li>
                     <li><a href="about.html" style="text-decoration: none; color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">Contact</a></li>
-                    <li><a href="#" style="text-decoration: none; color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">Privacy Policy</a></li>
-                    <li><a href="#" style="text-decoration: none; color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">Terms</a></li>
+                    <li><a href="privacy.html" style="text-decoration: none; color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">Privacy Policy</a></li>
+                    <li><a href="terms.html" style="text-decoration: none; color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">Terms & Conditions</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h4 style="margin-bottom: 15px; font-size: 0.95rem;">Support</h4>
                 <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem;">
                     <li><a href="https://wa.me/94787354843" target="_blank" style="text-decoration: none; color: var(--primary); font-weight: 500;">WhatsApp Support</a></li>
-                    <li><a href="#" style="text-decoration: none; color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">Documentation</a></li>
+                    <li><a href="mailto:asankachandima055@gmail.com" style="text-decoration: none; color: var(--text-dim); transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-dim)'">Email Support</a></li>
                 </ul>
             </div>
         </div>
@@ -105,6 +285,10 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Make sure icons re-render since we are replacing entire page content
+        lucide.createIcons();
+    </script>
 </body>
 </html>
 

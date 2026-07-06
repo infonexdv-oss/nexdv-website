@@ -161,8 +161,8 @@ section { padding: 80px 6%; position: relative; }
 .feature-list li i { color: var(--primary); width: 18px; }
 
 /* Footer */
-footer { border-top: 1px solid var(--border); padding: 60px 6% 30px; background: #000; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-top: 120px; }
+footer { margin-top: 50px; border-top: 1px solid var(--border); padding: 30px 6% 30px; background: #000; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-top: 0; }
 .footer-desc { color: var(--text-dim); margin-top: 16px; max-width: 300px; font-size: 0.9rem; }
 .footer-col h4 { font-size: 0.95rem; margin-bottom: 20px; color: #fff; }
 .footer-col ul { list-style: none; }
@@ -729,4 +729,6 @@ body.no-scroll, html.no-scroll {
     top: 120px;
     opacity: 1;
 }
+
+
 
