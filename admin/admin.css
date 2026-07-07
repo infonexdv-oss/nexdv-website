@@ -134,7 +134,8 @@ body:has(.login-container) {
     max-width: 400px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     backdrop-filter: blur(10px);
-    animation: loginFormEntry 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+    animation: loginFormEntry 0.8s ease-out forwards;
 }
 
 .login-container h2 {
