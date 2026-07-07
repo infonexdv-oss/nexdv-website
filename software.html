@@ -3,40 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rupix PRO V2.4 | NexDV PC Software</title>
+    <title>Software | NexDV</title>
     <link rel="stylesheet" href="index.css">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .loader-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: var(--bg-deep); display: flex; justify-content: center; align-items: center; z-index: 9999; flex-direction: column; }
+        .spinner { width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.1); border-top-color: var(--primary); border-radius: 50%; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
 </head>
 <body>
+    <div id="loader" class="loader-overlay">
+        <div class="spinner"></div>
+        <p style="margin-top: 20px; color: var(--text-dim);">Loading software...</p>
+    </div>
 
     <nav id="navbar">
         <a href="index.html" class="logo-group">
             <img src="https://i.ibb.co/qLVD2YWg/d7bf73944e81.png" alt="NexDV Logo">
-            
         </a>
-        
         <button class="menu-toggle" id="menu-toggle">
             <i data-lucide="menu"></i>
         </button>
-
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="pc.html" class="active">PC Software</a></li>
+            <li><a href="pc.html">PC Software</a></li>
             <li><a href="mobile.html">Mobile Apps</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
-        
         <a href="#download" class="nav-btn">Download Now</a>
     </nav>
 
     <header class="hero" style="min-height: 80vh; padding-top: 150px;">
-        <div class="badge reveal">Enterprise POS System</div>
-        <h1 class="reveal">Rupix PRO V2.4</h1>
-        <p class="reveal">Redefining the retail workflow with military-grade security and AI analytics. Built specifically for modern enterprises to scale operations efficiently.</p>
+        <div id="sw-category-badge" class="badge reveal">Software</div>
+        <h1 id="sw-title" class="reveal">Loading...</h1>
+        <p id="sw-desc" class="reveal">Please wait while we load the software details.</p>
         
         <div class="hero-btns reveal" style="margin-bottom: 50px;">
             <a href="#download" class="btn-primary">
-                <i data-lucide="download"></i> Download Version 2.4
+                <i data-lucide="download"></i> Download <span id="sw-hero-version"></span>
             </a>
             <a href="#features" class="btn-outline">
                 View Features
@@ -44,7 +49,7 @@
         </div>
         
         <div class="container reveal">
-            <img src="https://i.ibb.co/ZR9wZXvC/f3e390d55185.png" alt="Rupix Interface" class="floating-hero">
+            <img id="sw-hero-img" src="" alt="" class="floating-hero" style="display: none; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); object-fit: cover; max-height: 600px; width: 100%;">
         </div>
     </header>
 
@@ -52,109 +57,23 @@
         <div class="container">
             <div class="text-center reveal" style="margin-bottom: 60px;">
                 <h2>Elite Engineering</h2>
-                <p style="color: var(--text-dim); max-width: 600px; margin: 20px auto 0;">Every component of Rupix PRO V2.4 is designed for absolute reliability and speed in high-volume retail environments.</p>
+                <p id="sw-features-desc" style="color: var(--text-dim); max-width: 600px; margin: 20px auto 0;">Designed for absolute reliability and speed.</p>
             </div>
-            
-            <div class="grid-3" style="gap: 40px;">
-                <div class="glass-card reveal">
-                    <div class="icon-wrap"><i data-lucide="cpu"></i></div>
-                    <h3>Advanced Analytics</h3>
-                    <p>AI-driven inventory rotation and stock-out prediction engines to maximize your overhead turnover and profit margins.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <div class="icon-wrap"><i data-lucide="shield-alert"></i></div>
-                    <h3>Military Security</h3>
-                    <p>Triple-layer encryption protocols for your financial metrics and granular administrative user controls.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <div class="icon-wrap"><i data-lucide="wifi-off"></i></div>
-                    <h3>100% Offline Reliability</h3>
-                    <p>Built with a robust local SQLite engine ensuring your business continues running at full speed without needing an internet connection.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <div class="icon-wrap"><i data-lucide="printer"></i></div>
-                    <h3>Hardware Integration</h3>
-                    <p>Plug-and-play support for thermal receipt printers, cash drawers, and high-speed barcode scanners with zero configuration delay.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <div class="icon-wrap"><i data-lucide="bar-chart-2"></i></div>
-                    <h3>Comprehensive Reporting</h3>
-                    <p>Generate detailed daily, monthly, and yearly reports tracking sales, inventory levels, and overall profit/loss margins effortlessly.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <div class="icon-wrap"><i data-lucide="barcode"></i></div>
-                    <h3>Barcode Generation</h3>
-                    <p>Create, customize, and print precise barcode labels directly from your inventory database to streamline checkout processes.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <div class="icon-wrap"><i data-lucide="users"></i></div>
-                    <h3>Multi-User Access</h3>
-                    <p>Create customized roles for cashiers, managers, and admins with strict privilege boundaries to protect sensitive operations.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <div class="icon-wrap"><i data-lucide="save"></i></div>
-                    <h3>Automated Backups</h3>
-                    <p>Never lose your data. Configure scheduled daily offline backups that securely archive your entire business history locally.</p>
-                </div>
-                <div class="glass-card reveal">
-                    <div class="icon-wrap"><i data-lucide="calculator"></i></div>
-                    <h3>Tax Configuration</h3>
-                    <p>Adapt to regional financial regulations with highly customizable tax profiles, dual-tax support, and automated ledger calculations.</p>
-                </div>
+            <div id="sw-features-grid" class="grid-3" style="gap: 40px;">
+                <!-- Features dynamically injected here -->
             </div>
         </div>
     </section>
 
-    <section id="gallery" style="background: rgba(255,255,255,0.02); overflow: hidden;">
+    <section id="gallery" style="background: rgba(255,255,255,0.02); overflow: hidden; display: none;">
         <div class="container" style="max-width: 100%;">
             <div class="text-center reveal" style="margin-bottom: 40px;">
                 <div class="badge">Interface Gallery</div>
                 <h2>Pixel-Perfect UI</h2>
             </div>
-            
             <div class="marquee-container reveal" style="padding-bottom: 20px;">
-                <div class="marquee-track">
-                    <!-- Set 1 -->
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/ZR9wZXvC/f3e390d55185.png" alt="Screen 1"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/b5xbxyg9/6cf5198baa2e.png" alt="Screen 2"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/g2bcBkW/a94036cce8a9.png" alt="Screen 3"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/3YB6mtHw/d5822d6d09c3.png" alt="Screen 4"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/Fb6R6ZSR/230440dc38d5.png" alt="Screen 5"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/M53Hk4Ng/2e8a9e5af18f.png" alt="Screen 6"></div>
-                    <!-- Set 2 for seamless loop -->
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/ZR9wZXvC/f3e390d55185.png" alt="Screen 1"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/b5xbxyg9/6cf5198baa2e.png" alt="Screen 2"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/g2bcBkW/a94036cce8a9.png" alt="Screen 3"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/3YB6mtHw/d5822d6d09c3.png" alt="Screen 4"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/Fb6R6ZSR/230440dc38d5.png" alt="Screen 5"></div>
-                    <div class="gallery-item pc"><img src="https://i.ibb.co/M53Hk4Ng/2e8a9e5af18f.png" alt="Screen 6"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FREE MOBILE APP SECTION -->
-    <section id="free-mobile" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-        <div class="container">
-            <div class="app-row reveal" style="background: transparent; border: none; padding: 0; box-shadow: none;">
-                <div class="app-content">
-                    <div class="badge">Included Free</div>
-                    <h2>Rupix Mobile App</h2>
-                    <p>When you acquire Rupix PRO V2.4, you get complimentary access to the Rupix Mobile Application. Manage your store operations, check inventory, and monitor daily sales directly from your pocket.</p>
-                    
-                    <ul class="feature-list">
-                        <li><i data-lucide="check-circle"></i> Seamless PC to Mobile Synchronization</li>
-                        <li><i data-lucide="check-circle"></i> Live Dashboard & Revenue Tracking</li>
-                        <li><i data-lucide="check-circle"></i> Remote Administrative Overrides</li>
-                    </ul>
-
-                    <a href="#download" class="btn-primary" style="margin-top: 10px;">
-                        <i data-lucide="smartphone"></i> Get The Bundle
-                    </a>
-                </div>
-                <div class="app-visual" style="display: flex; justify-content: center; align-items: center; position: relative; height: 450px; width: 100%;">
-                    <img src="assets/For Apps/Rupix App/Screenshot_2026-07-06-22-05-24-330_com.rupixpro.jpg" alt="Rupix Mobile UI" style="position: absolute; width: 180px; border-radius: 24px; transform: rotate(-8deg) translateX(-50px) translateY(-10px); z-index: 1; box-shadow: 0 15px 35px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); filter: brightness(0.85); transition: all 0.3s ease;" onmouseover="this.style.transform='rotate(-5deg) translateX(-60px) translateY(-15px)'; this.style.filter='brightness(1)';" onmouseout="this.style.transform='rotate(-8deg) translateX(-50px) translateY(-10px)'; this.style.filter='brightness(0.85)';">
-                    <img src="assets/For Apps/Rupix App/Screenshot_2026-07-06-22-05-02-245_com.rupixpro.jpg" alt="Rupix Mobile UI 2" style="position: absolute; width: 210px; border-radius: 24px; transform: rotate(4deg) translateX(30px) translateY(15px); z-index: 2; box-shadow: 0 20px 50px rgba(0,0,0,0.8); border: 1px solid rgba(255,255,255,0.15); transition: all 0.3s ease;" onmouseover="this.style.transform='rotate(0deg) translateX(30px) translateY(5px) scale(1.05)';" onmouseout="this.style.transform='rotate(4deg) translateX(30px) translateY(15px) scale(1)';">
+                <div id="sw-marquee-track" class="marquee-track">
+                    <!-- Gallery dynamically injected here -->
                 </div>
             </div>
         </div>
@@ -163,33 +82,20 @@
     <section id="download">
         <div class="container text-center">
             <div class="glass-card reveal" style="padding: 60px 40px; display: inline-block; width: 100%; max-width: 800px; text-align: center;">
-                <img src="assets/rupix_mobile.png" alt="Rupix App Logo" style="width: 120px; border-radius: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.6); margin: 0 auto 30px; display: block;">
+                <img id="sw-bottom-logo" src="" alt="App Logo" style="width: 120px; height: 120px; object-fit: contain; border-radius: 24px; box-shadow: 0 15px 40px rgba(0,0,0,0.6); margin: 0 auto 30px; display: none; background: rgba(0,0,0,0.5); padding: 10px;">
                 <div class="badge">System Architecture</div>
                 <h2 style="margin-bottom: 2rem;">Ready for Windows 10 & 11</h2>
-                <p style="color: var(--text-dim); font-size: 1.1rem; margin: 0 auto 3rem;">Optimized for 64-bit architecture with support for direct-thermal printers and inkjet configurations with zero configuration delay.</p>
+                <p id="sw-bottom-desc" style="color: var(--text-dim); font-size: 1.1rem; margin: 0 auto 3rem;"></p>
                 
-                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+                <div id="sw-system-reqs" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
                     <div class="badge" style="background: transparent; border-color: #555;">AMD / INTEL 64-BIT</div>
-                    <div class="badge" style="background: transparent; border-color: #555;">SQLITE ENGINE</div>
+                    <div class="badge" style="background: transparent; border-color: #555;">OPTIMIZED ENGINE</div>
                     <div class="badge" style="background: transparent; border-color: #555;">4GB+ RAM</div>
                 </div>
                 
-                <a href="https://drive.google.com/file/d/1_7tKufWgbWckQP6_BQmJBszEzKk0q433/view?usp=drive_link" target="_blank" class="btn-primary" style="padding: 16px 40px; font-size: 1.1rem;">
-                    <i data-lucide="download"></i> Download Rupix PRO V2.4 Bundle
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- DYNAMIC PC SOFTWARE CATALOG -->
-    <section id="dynamic-catalog" style="padding: 60px 0; background: var(--bg-main); display: none;">
-        <div class="container">
-            <div class="text-center reveal" style="margin-bottom: 40px;">
-                <div class="badge">Other Software</div>
-                <h2>Additional PC Solutions</h2>
-            </div>
-            <div id="software-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px;">
-                <!-- Software items will be injected here by script.js -->
+                <div id="sw-download-btn-container">
+                    <!-- Download button injected here -->
+                </div>
             </div>
         </div>
     </section>
@@ -248,47 +154,18 @@
         <div class="footer-bottom" style="text-align: center; padding: 15px; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.8rem; letter-spacing: 1px;">
             &copy; 2026 NexDv SOFTWARE SOLUTIONS.
         </div>
-    </footer>
-
-    <a href="https://wa.me/94787354843" target="_blank" class="fab-whatsapp">
-        <i data-lucide="message-circle"></i>
-    </a>
-
-    <!-- Modal for Software Details -->
+    </footer>    <!-- Modal for Software Details (Kept for compatibility if needed) -->
     <div id="software-modal" class="modal hidden" style="display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:2000; align-items:center; justify-content:center;">
         <div class="modal-content glass-card" style="width: 90%; max-width: 800px; max-height: 90vh; overflow-y: auto; padding: 40px; position: relative;">
             <span class="close-modal" style="position: absolute; top: 20px; right: 20px; font-size: 2rem; cursor: pointer; color: var(--text-dim);" onclick="document.getElementById('software-modal').style.display='none'">&times;</span>
             <div id="modal-body"></div>
         </div>
     </div>
-
-    <!-- Toast Notification -->
-    <div id="coming-soon-toast" style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(100px); background: #0f1115; color: white; padding: 12px 24px; border-radius: 8px; border: 1px solid var(--primary); z-index: 9999; opacity: 0; transition: all 0.3s ease; display: flex; align-items: center; gap: 10px; font-weight: 500; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-        <i data-lucide="info" style="color: var(--primary);"></i> Coming Soon!
-    </div>
-    <style>
-        #coming-soon-toast.show {
-            transform: translateX(-50%) translateY(0) !important;
-            opacity: 1 !important;
-        }
-    </style>
-
-    <!-- Supabase -->
+    
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="supabase-config.js"></script>
-    <!-- Main Script -->
     <script src="script.js"></script>
+    <script src="software.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 

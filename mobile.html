@@ -12,275 +12,43 @@
     <nav id="navbar">
         <a href="index.html" class="logo-group">
             <img src="https://i.ibb.co/qLVD2YWg/d7bf73944e81.png" alt="NexDV Logo">
-            
         </a>
-        
         <button class="menu-toggle" id="menu-toggle">
             <i data-lucide="menu"></i>
         </button>
-
         <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="pc.html">PC Software</a></li>
             <li><a href="mobile.html" class="active">Mobile Apps</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
-        
-        <a href="#apps" class="nav-btn">View All Apps</a>
+        <div class="nav-search" style="position: relative; margin-left: 20px;">
+            <i data-lucide="search" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-dim); width: 16px; height: 16px;"></i>
+            <input type="text" id="app-search-input" placeholder="Search apps..." style="padding: 8px 15px 8px 35px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; font-size: 0.9rem; outline: none; width: 260px; transition: all 0.3s ease;">
+        </div>
     </nav>
 
-    <header class="hero" style="min-height: 70vh; padding-top: 150px; padding-bottom: 50px;">
-        <div class="badge reveal">Android Ecosystem</div>
-        <h1 class="reveal">Next-Gen Mobile Utility</h1>
-        <p class="reveal">Discover our 5 elite Android applications. Engineered for speed, designed for absolute professional utility.</p>
+    <!-- Hero Section -->
+    <header class="hero" style="min-height: 50vh; padding-top: 150px; padding-bottom: 50px;">
+        <div class="hero-content">
+            <div class="badge reveal">Android Ecosystem</div>
+            <h1 class="reveal gradient-text">Next-Gen Mobile Utility</h1>
+            <p class="reveal">Discover our elite Android applications. Engineered for speed, designed for absolute professional utility.</p>
+        </div>
     </header>
 
     <section id="apps" style="padding-top: 0;">
-        <div class="container">
-            <div class="app-grid-container">
-                <!-- APP 1: B Corder Mobile -->
-                <div class="app-card reveal">
-                    <div class="app-card-header">
-                        <img src="assets/bcorder_logo.png" alt="B Corder Logo" class="app-logo" onerror="this.src='https://i.ibb.co/ZR9wZXvC/f3e390d55185.png'">
-                        <div class="app-card-info">
-                            <div class="badge">Hardware Utility</div>
-                            <h2 style="margin-bottom: 10px;">B Corder Mobile</h2>
-                            <p style="margin-bottom: 0;">Transform your Android device into a high-speed, professional barcode scanner. Connects seamlessly directly to your PC, eliminating the need for expensive dedicated scanner hardware.</p>
-                            <p style="margin-top: 10px; color: var(--primary); font-weight: 600;">Includes the required PC Suite software completely free.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="app-card-features">
-                        <div class="app-card-feature"><i data-lucide="zap"></i> Zero-Latency Scan</div>
-                        <div class="app-card-feature"><i data-lucide="wifi"></i> Wireless PC Sync</div>
-                        <div class="app-card-feature"><i data-lucide="box"></i> Inventory Ready</div>
-                    </div>
+        <div class="section-header reveal">
+            <h1 class="gradient-text">Elite Mobile Apps</h1>
+            <p>Native performance combined with stunning design.</p>
+        </div>
 
-                    <div class="app-card-actions">
-                        <a href="#" onclick="showComingSoon(event);" class="btn-primary"><i data-lucide="download"></i> Download B Corder</a>
-                        <button class="toggle-gallery-btn" onclick="openModalGallery(this, 'bcorder-gallery', 'B Corder Mobile')" >
-                            <i data-lucide="image"></i> View Screenshots
-                        </button>
-                    </div>
-
-                    <div id="bcorder-gallery" class="gallery-accordion">
-                        <div class="marquee-container" style="padding-top: 0; padding-bottom: 20px;">
-                            <div class="marquee-track">
-                                <div class="gallery-item"><img src="assets/bcorder_1.png" alt="B Corder Screen 1"></div>
-                                <!-- loop -->
-                                <div class="gallery-item"><img src="assets/bcorder_1.png" alt="B Corder Screen 1"></div>
-                                <div class="gallery-item"><img src="assets/bcorder_1.png" alt="B Corder Screen 1"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- APP 2: DYC App -->
-                <div class="app-card reveal">
-                    <div class="app-card-header">
-                        <img src="assets/dyc_logo.png" alt="DYC Logo" class="app-logo" onerror="this.src='https://i.ibb.co/ZR9wZXvC/f3e390d55185.png'">
-                        <div class="app-card-info">
-                            <div class="badge">Service & Operations</div>
-                            <h2 style="margin-bottom: 10px;">DYC App</h2>
-                            <p style="margin-bottom: 0;">A comprehensive mobile application tailored for streamlined service management and client interactions. Keep your workflow strictly professional and highly responsive.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="app-card-features">
-                        <div class="app-card-feature"><i data-lucide="briefcase"></i> Service Management</div>
-                        <div class="app-card-feature"><i data-lucide="users"></i> Client Database</div>
-                        <div class="app-card-feature"><i data-lucide="clock"></i> Real-time Updates</div>
-                    </div>
-
-                    <div class="app-card-actions">
-                        <a href="https://play.google.com/store/apps/details?id=com.dyc.lk" target="_blank" class="btn-primary"><i data-lucide="download"></i> Download DYC App</a>
-                        <button class="toggle-gallery-btn" onclick="openModalGallery(this, 'dyc-gallery', 'DYC Connect')" >
-                            <i data-lucide="image"></i> View Screenshots
-                        </button>
-                    </div>
-
-                    <div id="dyc-gallery" class="gallery-accordion">
-                        <div class="marquee-container" style="padding-top: 0; padding-bottom: 20px;">
-                            <div class="marquee-track">
-                                <div class="gallery-item"><img src="assets/For Apps/DYC/dyc_1.png" alt="DYC Screen 1"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/DYC/dyc_2.png" alt="DYC Screen 2"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/DYC/dyc_3.png" alt="DYC Screen 3"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/DYC/dyc_4.png" alt="DYC Screen 4"></div>
-                                <!-- loop -->
-                                <div class="gallery-item"><img src="assets/For Apps/DYC/dyc_1.png" alt="DYC Screen 1"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/DYC/dyc_2.png" alt="DYC Screen 2"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/DYC/dyc_3.png" alt="DYC Screen 3"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/DYC/dyc_4.png" alt="DYC Screen 4"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- APP 3: HelpMate App -->
-                <div class="app-card reveal">
-                    <div class="app-card-header">
-                        <img src="assets/helpmate.png" alt="HelpMate Logo" class="app-logo" onerror="this.src='https://i.ibb.co/ZR9wZXvC/f3e390d55185.png'">
-                        <div class="app-card-info">
-                            <div class="badge">Emergency Utility</div>
-                            <h2 style="margin-bottom: 10px;">HelpMate App</h2>
-                            <p style="margin-bottom: 0;">Your ultimate digital assistant for emergency and first-aid situations. Featuring integrated access to emergency services, first-aid tutorials, and quick communication tools.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="app-card-features">
-                        <div class="app-card-feature"><i data-lucide="phone-call"></i> SOS Integration</div>
-                        <div class="app-card-feature"><i data-lucide="heart-pulse"></i> First-Aid Guide</div>
-                        <div class="app-card-feature"><i data-lucide="map-pin"></i> Location Sharing</div>
-                    </div>
-
-                    <div class="app-card-actions">
-                        <a href="https://play.google.com/store/apps/details?id=com.helpmate.lk" target="_blank" class="btn-primary"><i data-lucide="download"></i> Download HelpMate</a>
-                        <button class="toggle-gallery-btn" onclick="openModalGallery(this, 'helpmate-gallery', 'Helpmate Service App')" >
-                            <i data-lucide="image"></i> View Screenshots
-                        </button>
-                    </div>
-
-                    <div id="helpmate-gallery" class="gallery-accordion">
-                        <div class="marquee-container" style="padding-top: 0; padding-bottom: 20px;">
-                            <div class="marquee-track">
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.27 PM (1).jpeg" alt="HelpMate Screen 1"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.27 PM.jpeg" alt="HelpMate Screen 2"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.28 PM (1).jpeg" alt="HelpMate Screen 3"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.28 PM (2).jpeg" alt="HelpMate Screen 4"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.28 PM.jpeg" alt="HelpMate Screen 5"></div>
-                                <!-- loop -->
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.27 PM (1).jpeg" alt="HelpMate Screen 1"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.27 PM.jpeg" alt="HelpMate Screen 2"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.28 PM (1).jpeg" alt="HelpMate Screen 3"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.28 PM (2).jpeg" alt="HelpMate Screen 4"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Helpmate/WhatsApp Image 2026-04-22 at 5.21.28 PM.jpeg" alt="HelpMate Screen 5"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- APP 4: Riya Mithuru V4 -->
-                <div class="app-card reveal">
-                    <div class="app-card-header">
-                        <img src="assets/riya_logo.png" alt="Riya Mithuru Logo" class="app-logo" onerror="this.src='https://i.ibb.co/ZR9wZXvC/f3e390d55185.png'">
-                        <div class="app-card-info">
-                            <div class="badge">Automotive</div>
-                            <h2 style="margin-bottom: 10px;">Riya Mithuru V4</h2>
-                            <p style="margin-bottom: 0;">The definitive assistant for drivers. From road rules and quiz modules for learner drivers to advanced utility features, this app is the complete automotive companion.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="app-card-features">
-                        <div class="app-card-feature"><i data-lucide="book-open"></i> Road Rules Guide</div>
-                        <div class="app-card-feature"><i data-lucide="check-square"></i> Learner Quizzes</div>
-                        <div class="app-card-feature"><i data-lucide="car"></i> Vehicle Utility</div>
-                    </div>
-
-                    <div class="app-card-actions">
-                        <a href="https://play.google.com/store/apps/details?id=com.riyamithuru" target="_blank" class="btn-primary"><i data-lucide="download"></i> Download Riya Mithuru</a>
-                        <button class="toggle-gallery-btn" onclick="openModalGallery(this, 'riya-gallery', 'Riya Mithuru')" >
-                            <i data-lucide="image"></i> View Screenshots
-                        </button>
-                    </div>
-
-                    <div id="riya-gallery" class="gallery-accordion">
-                        <div class="marquee-container" style="padding-top: 0; padding-bottom: 20px;">
-                            <div class="marquee-track">
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-29-51-559_com.riyamithuru.jpg" alt="Riya Screen 1"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-43-00-255_com.riyamithuru.jpg" alt="Riya Screen 2"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-43-09-836_com.riyamithuru.jpg" alt="Riya Screen 3"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-43-25-249_com.riyamithuru.jpg" alt="Riya Screen 4"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-44-24-775_com.riyamithuru.jpg" alt="Riya Screen 5"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-45-12-900_com.riyamithuru.jpg" alt="Riya Screen 6"></div>
-                                <!-- loop -->
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-29-51-559_com.riyamithuru.jpg" alt="Riya Screen 1"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-43-00-255_com.riyamithuru.jpg" alt="Riya Screen 2"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-43-09-836_com.riyamithuru.jpg" alt="Riya Screen 3"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-43-25-249_com.riyamithuru.jpg" alt="Riya Screen 4"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-44-24-775_com.riyamithuru.jpg" alt="Riya Screen 5"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Riya Mithuru/Screenshot_2026-06-18-12-45-12-900_com.riyamithuru.jpg" alt="Riya Screen 6"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- APP 5: Tiffie -->
-                <div class="app-card reveal">
-                    <div class="app-card-header">
-                        <img src="assets/tiffie_logo.png" alt="Tiffie Logo" class="app-logo" onerror="this.src='https://i.ibb.co/ZR9wZXvC/f3e390d55185.png'">
-                        <div class="app-card-info">
-                            <div class="badge">Lifestyle</div>
-                            <h2 style="margin-bottom: 10px;">Tiffie</h2>
-                            <p style="margin-bottom: 0;">A beautifully designed, premium utility app that enhances your daily interactions. Built on ultra-fast architecture ensuring an unparalleled user experience.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="app-card-features">
-                        <div class="app-card-feature"><i data-lucide="smartphone"></i> Fluid Interface</div>
-                        <div class="app-card-feature"><i data-lucide="moon"></i> Dark Mode</div>
-                        <div class="app-card-feature"><i data-lucide="zap"></i> Fast Performance</div>
-                    </div>
-
-                    <div class="app-card-actions">
-                        <a href="#" onclick="showComingSoon(event);" class="btn-primary"><i data-lucide="download"></i> Download Tiffie</a>
-                        <button class="toggle-gallery-btn" onclick="openModalGallery(this, 'tiffie-gallery', 'Tiffie Food App')" >
-                            <i data-lucide="image"></i> View Screenshots
-                        </button>
-                    </div>
-
-                    <div id="tiffie-gallery" class="gallery-accordion">
-                        <div class="marquee-container" style="padding-top: 0; padding-bottom: 20px;">
-                            <div class="marquee-track">
-                                <div class="gallery-item"><img src="assets/tiffie.png" alt="Tiffie Screen 1"></div>
-                                <!-- loop -->
-                                <div class="gallery-item"><img src="assets/tiffie.png" alt="Tiffie Screen 1"></div>
-                                <div class="gallery-item"><img src="assets/tiffie.png" alt="Tiffie Screen 1"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- APP 6: Rupix Mobile -->
-                <div class="app-card reveal">
-                    <div class="app-card-header">
-                        <img src="assets/rupix_mobile.png" alt="Rupix Logo" class="app-logo" onerror="this.src='https://i.ibb.co/ZR9wZXvC/f3e390d55185.png'">
-                        <div class="app-card-info">
-                            <div class="badge">Retail Utility</div>
-                            <h2 style="margin-bottom: 10px;">Rupix Mobile</h2>
-                            <p style="margin-bottom: 0;">The mobile companion for your Rupix PRO V2.4 suite. Monitor inventory, track sales, and manage your entire business securely on the go.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="app-card-features">
-                        <div class="app-card-feature"><i data-lucide="bar-chart-2"></i> Live Sales Tracking</div>
-                        <div class="app-card-feature"><i data-lucide="package"></i> Inventory Control</div>
-                        <div class="app-card-feature"><i data-lucide="shield"></i> Secure Sync</div>
-                    </div>
-
-                    <div class="app-card-actions">
-                        <a href="pc.html" class="btn-primary"><i data-lucide="download"></i> Download PC Software</a>
-                        <button class="toggle-gallery-btn" onclick="openModalGallery(this, 'rupix-gallery', 'Rupix Mobile')" >
-                            <i data-lucide="image"></i> View Screenshots
-                        </button>
-                    </div>
-
-                    <div id="rupix-gallery" class="gallery-accordion">
-                        <div class="marquee-container" style="padding-top: 0; padding-bottom: 20px;">
-                            <div class="marquee-track">
-                                <div class="gallery-item"><img src="assets/For Apps/Rupix App/Screenshot_2026-07-06-22-05-02-245_com.rupixpro.jpg" alt="Rupix Screen 1"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Rupix App/Screenshot_2026-07-06-22-05-24-330_com.rupixpro.jpg" alt="Rupix Screen 2"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Rupix App/Screenshot_2026-07-06-22-05-30-008_com.rupixpro.jpg" alt="Rupix Screen 3"></div>
-                                <div class="gallery-item"><img src="assets/For Apps/Rupix App/Screenshot_2026-07-06-22-05-33-145_com.rupixpro.jpg" alt="Rupix Screen 4"></div>
-                                <!-- loop -->
-                                <div class="gallery-item"><img src="assets/For Apps/Rupix App/Screenshot_2026-07-06-22-05-02-245_com.rupixpro.jpg" alt="Rupix Screen 1"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="app-grid-container" id="software-grid">
+            <!-- Apps will be dynamically loaded from Supabase database -->
         </div>
     </section>
 
-                <footer style="border-top: 1px solid var(--border); background: var(--bg-deep);">
+    <footer style="border-top: 1px solid var(--border); background: var(--bg-deep);">
         <div class="container footer-grid reveal" style="padding-top: 20px; padding-bottom: 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px;">
             <div class="footer-col" style="grid-column: span 2;">
                 <div class="logo-group" style="margin-bottom: 10px;">
@@ -291,15 +59,15 @@
                 <div style="display: flex; gap: 15px; margin-top: 15px; align-items: center;">
                     <!-- Facebook -->
                     <a href="https://www.facebook.com/nexdv" target="_blank" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Facebook">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="var(--text-dim)"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                     </a>
                     <!-- WhatsApp -->
                     <a href="https://wa.me/94787354843" target="_blank" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="WhatsApp">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="var(--text-dim)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                     </a>
                     <!-- Email -->
                     <a href="mailto:asankachandima055@gmail.com" target="_blank" style="transition: transform 0.3s; display: inline-block;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" title="Email">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ea4335" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     </a>
                 </div>
             </div>
@@ -340,68 +108,52 @@
         <i data-lucide="message-circle"></i>
     </a>
 
-    <script src="script.js"></script>
-
     <!-- Global Premium Gallery Modal -->
     <div id="gallery-modal" class="modal-overlay">
-        
         <!-- Top Navigation Area -->
-        <div class="modal-top-bar" style="position: absolute; top: 25px; left: 0; width: 100%; padding: 0 40px; display: flex; justify-content: center; align-items: center; z-index: 1000; box-sizing: border-box; ">
-            
-            <!-- Floating Pill Title -->
-            <div style="display: flex; align-items: center; gap: 12px; background: rgba(20, 20, 25, 0.8); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px); padding: 12px 30px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.05);  box-shadow: 0 15px 30px rgba(0,0,0,0.5);">
-                <img id="modal-app-logo" src="" alt="App Logo" style="width: 28px; height: 28px; border-radius: 6px; display: none;">
-                <h3 id="modal-title" style="margin: 0; font-size: 1.25rem; color: #fff; font-weight: 600; letter-spacing: 0.3px;">App Screenshots</h3>
+        <div class="modal-top-bar" style="position: absolute; top: 25px; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; z-index: 1000; box-sizing: border-box;">
+            <!-- The pill shape container for the title -->
+            <div style="display: flex; align-items: center; gap: 15px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 10px 30px; border-radius: 12px;">
+                <img id="modal-app-logo" src="" style="width: 40px; height: 40px; border-radius: 8px; display: none; object-fit: contain;">
+                <h3 id="modal-title" style="color: white; margin: 0; font-size: 1.4rem; font-weight: 600;">Screenshots</h3>
             </div>
-
-            <!-- Floating Close Button -->
-            <button class="modal-close" onclick="closeModalGallery()" style="position: absolute; right: 40px; background: rgba(20, 20, 25, 0.8); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.05); width: 45px; height: 45px; border-radius: 12px; display: flex; justify-content: center; align-items: center; color: white; cursor: pointer; transition: all 0.3s;  box-shadow: 0 10px 20px rgba(0,0,0,0.4);"><i data-lucide="x" style="width: 20px; height: 20px;"></i></button>
+            
+            <!-- Absolute Close Button -->
+            <span class="close-modal carousel-btn" onclick="closeModalGallery()" style="position: absolute; right: 20px; top: 0;"><i data-lucide="x"></i></span>
         </div>
 
-        <!-- Center Slider Area -->
-        <div class="modal-center-area" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; z-index: 500;">
+        <div class="modal-center-area" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; padding: 80px 20px; box-sizing: border-box; gap: 30px;">
+            <div class="carousel-btn" onclick="prevModalImage()" style="z-index: 1001;"><i data-lucide="chevron-left"></i></div>
             
-            <button class="carousel-btn prev-btn" onclick="prevModalImage()" style="position: absolute; left: calc(50% - 25vw - 60px); background: rgba(25, 25, 30, 0.9); border: 1px solid rgba(255,255,255,0.05); width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);"><i data-lucide="chevron-left" style="width: 24px; height: 24px;"></i></button>
-            
-            <div class="slider-viewport" style="overflow: hidden; height: 100vh; width: 100vw; display: flex; justify-content: flex-start; background: transparent;">
-                <div id="modal-slider-track" style="display: flex; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform; width: 100%; height: 100%;">
+            <div class="carousel-container" style="width: 70vw; max-width: 500px; height: 85vh; overflow: hidden; display: flex; justify-content: center; align-items: center; position: relative;">
+                <div id="modal-slider-track" style="display: flex; transition: transform 0.4s ease-in-out; align-items: center; height: 100%; width: 100%;">
                     <!-- Images injected here -->
                 </div>
             </div>
-            
-            <button class="carousel-btn next-btn" onclick="nextModalImage()" style="position: absolute; right: calc(50% - 25vw - 60px); background: rgba(25, 25, 30, 0.9); border: 1px solid rgba(255,255,255,0.05); width: 50px; height: 50px; border-radius: 50%; box-shadow: 0 10px 20px rgba(0,0,0,0.5);"><i data-lucide="chevron-right" style="width: 24px; height: 24px;"></i></button>
 
+            <div class="carousel-btn" onclick="nextModalImage()" style="z-index: 1001;"><i data-lucide="chevron-right"></i></div>
         </div>
     </div>
-    <!-- Global Toast Notification -->
-    <div id="coming-soon-toast" class="toast-notification">
-        <i data-lucide="clock"></i> <span>Coming Soon!</span>
+
+
+
+    <!-- Modal for Software Details (from script.js injection) -->
+    <div id="software-modal" class="modal hidden" style="display: none; position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:2000; align-items:center; justify-content:center;">
+        <div class="modal-content glass-card" style="width: 90%; max-width: 800px; max-height: 90vh; overflow-y: auto; padding: 40px; position: relative;">
+            <span class="close-modal" style="position: absolute; top: 20px; right: 20px; font-size: 2rem; cursor: pointer; color: var(--text-dim);" onclick="document.getElementById('software-modal').style.display='none'">&times;</span>
+            <div id="modal-body"></div>
+        </div>
     </div>
+
+    <!-- Toast Notification -->
+    <div id="coming-soon-toast" style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px); background: #0f1115; color: white; padding: 12px 24px; border-radius: 8px; border: 1px solid var(--primary); z-index: 9999; opacity: 0; transition: all 0.3s ease; display: flex; align-items: center; gap: 10px; font-weight: 500; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+        <i data-lucide="info" style="color: var(--primary);"></i> Coming Soon!
+    </div>
+
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <!-- Main Script -->
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

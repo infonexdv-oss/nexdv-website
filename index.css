@@ -104,8 +104,8 @@ nav.scrolled {
 }
 
 /* Layout Blocks */
-section { padding: 80px 6%; position: relative; }
-.container { max-width: 1100px; margin: 0 auto; }
+section { padding: 80px 0; position: relative; }
+.container { max-width: 1100px; margin: 0 auto; width: 100%; padding: 0 24px; box-sizing: border-box; }
 .text-center { text-align: center; }
 
 .hero {
@@ -118,7 +118,7 @@ section { padding: 80px 6%; position: relative; }
 
 /* Grids & Cards */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
-.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
 
 .glass-card {
     backdrop-filter: blur(8px);
@@ -368,11 +368,10 @@ footer { margin-top: 50px; border-top: 1px solid var(--border); padding: 30px 6%
 }
 .app-card-info {
     flex: 1;
-    min-width: 300px;
 }
 .app-card-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
     margin-top: 25px;
     padding-top: 25px;
@@ -387,7 +386,7 @@ footer { margin-top: 50px; border-top: 1px solid var(--border); padding: 30px 6%
     font-weight: 500;
 }
 .app-card-feature i {
-    color: var(--primary);
+    color: #ffffff;
     width: 18px;
     height: 18px;
 }
@@ -395,14 +394,33 @@ footer { margin-top: 50px; border-top: 1px solid var(--border); padding: 30px 6%
     display: flex;
     gap: 15px;
     margin-top: 30px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.app-card-actions > * {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Grid specific fixes for app-card */
 .app-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, 480px);
+    justify-content: center;
     gap: 40px;
+}
+
+@keyframes searchReveal {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+@keyframes searchHide {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.95); }
 }
 .app-grid-container .app-card {
     backdrop-filter: blur(8px);
@@ -431,12 +449,20 @@ footer .logo-text-main, footer .logo-text-sub {
     .grid-2, .grid-3, .grid-4 {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
+    .hero h1 { font-size: 4rem; }
+    .hero-visual { display: none; }
+    .nav-search input { width: 140px !important; }
 }
 
 @media (max-width: 768px) {
+    .app-card-actions {
+        flex-wrap: wrap;
+    }
     h1 { font-size: 2.5rem; }
     h2 { font-size: 2rem; }
-    .hero { padding-top: 120px; padding-top: 120px; min-height: auto; }
+    .hero { padding-top: 120px; min-height: auto; }
+    section { padding: 60px 0; }
+    .container { padding: 0 20px; }
     
     .nav-links {
         display: none;
@@ -464,7 +490,7 @@ footer .logo-text-main, footer .logo-text-sub {
         text-align: center;
     }
     .app-card-features {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .app-card-actions {
         justify-content: center;
@@ -749,4 +775,23 @@ body.no-scroll, html.no-scroll {
 }
 .btn-fb:hover svg {
     transform: rotate(-15deg) scale(1.2);
+}
+
+#coming-soon-toast.show {
+    transform: translateX(-50%) translateY(0) !important;
+    opacity: 1 !important;
+}
+
+.section-header { text-align: center; margin-bottom: 50px; }
+
+.pc-adobe-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+.pc-adobe-card:hover .hover-bg {
+    opacity: 0.8 !important;
+}
+.pc-adobe-card:hover .hover-gradient {
+    opacity: 1 !important;
 }
